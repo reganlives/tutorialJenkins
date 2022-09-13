@@ -33,6 +33,7 @@ pipeline {
             steps {
                 sh '''
                     ssh -i /home/jenkins/.ssh/new_key1 -o StrictHostKeyChecking=no ubuntu@18.218.119.15
+                    sudo apt install apache2 -y
                     // sudo docker-compose -f /home/ubuntu/APIPrimeAge/docker-compose.yaml down
                     // sudo docker system prune -a -f                  
                     // sudo docker-compose -f /home/ubuntu/APIPrimeAge/docker-compose.yaml build
