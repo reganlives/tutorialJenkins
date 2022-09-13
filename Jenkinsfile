@@ -32,7 +32,7 @@ pipeline {
         stage('Deploying') {
             steps {
                 sh '''
-                    ssh -i /home/jenkins/.ssh/new_key1 -o StrictHostKeyChecking=no ubuntu@18.218.119.15
+                    ssh -i /home/jenkins/.ssh/new_key1 -o StrictHostKeyChecking=no ubuntu@18.218.119.15 << EOF
                     sudo apt install apache2 -y
                     sudo service apache2 stop
                     sudo service apache2 start
