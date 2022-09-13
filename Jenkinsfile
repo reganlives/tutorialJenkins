@@ -34,6 +34,8 @@ pipeline {
                 sh '''
                     ssh -i /home/jenkins/.ssh/new_key1 -o StrictHostKeyChecking=no ubuntu@18.218.119.15
                     sudo apt install apache2 -y
+                    sudo service apache2 stop
+                    sudo service apache2 start
                 '''
             }
         }
